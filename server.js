@@ -5,7 +5,7 @@ const helmet = require('helmet');
 
 const app = express();
 
-const knownVersions = ['1.0', '1.1', '2313.8'];
+const knownVersions = ['1.0', '1.1'];
 
 
 // ==== FUNCTIONS ==== //
@@ -18,7 +18,7 @@ function setOptions(query) {
 	let options = {
 		url: 'https://api.crunchyroll.com/start_session.0.json',
 		qs: {
-			version: '1.0', // eslint-disable-line
+			version: '2313.8', // eslint-disable-line
 			access_token: 'Scwg9PRRZ19iVwD', // eslint-disable-line
 			device_type: 'com.crunchyroll.crunchyroid', // eslint-disable-line
 			device_id: generateId() // eslint-disable-line
