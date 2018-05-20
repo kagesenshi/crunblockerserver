@@ -5,7 +5,7 @@ const helmet = require('helmet');
 
 const app = express();
 
-const knownVersions = ['1.0', '1.1'];
+const knownVersions = ['1.0', '1.1', '2313.8'];
 
 
 // ==== FUNCTIONS ==== //
