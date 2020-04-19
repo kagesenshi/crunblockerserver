@@ -16,11 +16,11 @@ const knownVersions = ['1.0', '1.1', '2313.8'];
  */
 function setOptions(query) {
 	let options = {
-		url: 'https://api.crunchyroll.com/start_session.0.json',
+		url: 'http://api-manga.crunchyroll.com/cr_start_session',
 		qs: {
-			version: '2313.8', // eslint-disable-line
-			access_token: 'Scwg9PRRZ19iVwD', // eslint-disable-line
-			device_type: 'com.crunchyroll.crunchyroid', // eslint-disable-line
+			api_ver: '1.0', // eslint-disable-line
+			access_token: 'FLpcfZH4CbW4muO', // eslint-disable-line
+			device_type: 'com.crunchyroll.manga.android', // eslint-disable-line
 			device_id: generateId() // eslint-disable-line
 		}
 	};
@@ -146,8 +146,8 @@ app.get('*', (req, res) => {
 
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 3001; // eslint-disable-line
-app.listen(port, () => {
+/* app.listen(port, () => {
 	console.log(`Listening on port ${port}`);
-});
+});*/
 
 module.exports = app;
